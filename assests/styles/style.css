@@ -10,36 +10,38 @@
 }
 
 
+
 .animation{
     display: flex;
     justify-content: center;
     align-items: center;
+   
     
 }
-.content{
+.container{
     position: relative;
+    margin-right: -90%;
     
 }
 
-.content h1{
+.container>h1{
     position: absolute;
     transform :translate(-50%, -50%);
-   font-size: 6rem;
-   margin-top: 80px;
-   /* background-color: black; */
-
-  
 }
-.content h1:nth-child(1){
+.container h1:nth-child(1){
     color: transparent;
     -webkit-text-stroke: 2px #03a9f4;
 }
-.content h1:nth-child(2){
+.container h1:nth-child(2){
     color: #03a9f4;
-    animation: animate 4s ease-in-out;
+    animation: animate 4s ease-in-out infinite;
 }
-@keyframes animation{
+
+@keyframes animate {
     0%, 100%{
-        
+        clip-path: polygon(1% 43%, 16% 37%, 24% 34%, 40% 34%, 44% 41%, 54% 45%, 62% 48%, 72% 46%, 80% 41%, 85% 35%, 93% 34%, 98% 36%, 99% 100%, 2% 99%);
     }
-}
+    50%{
+        clip-path: polygon(2% 54%, 11% 59%, 21% 62%, 28% 62%, 36% 61%, 41% 58%, 44% 55%, 47% 53%, 51% 51%, 61% 48%, 68% 51%, 77% 55%, 82% 57%, 89% 58%, 94% 60%, 98% 60%, 99% 98%, 1% 100%);
+    }
+};
